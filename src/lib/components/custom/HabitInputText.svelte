@@ -7,20 +7,7 @@
 
 	let inputText = $state('');
 
-	class Habit {
-		category: string;
-		title: string;
-		goal?: string;
-		notes: string;
-
-		constructor(category: string, title: string, notes: string, goal?: string) {
-			this.category = category;
-			this.title = title;
-			this.goal = goal;
-			this.notes = notes;
-		}
-	}
-	const onSubmit = (e: Event) => {
+	const onSubmit = async (e: Event) => {
 		e.preventDefault();
 		if (inputText.length < 4) {
 			toast.error('Error', {
@@ -29,22 +16,19 @@
 			return;
 		}
 
+		const response = await fetch('/api/process-flow', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ text: inputText })
+		});
 		toast.success('Text submitted: ');
-
-		let newHabit;
-		if (inputText.includes('study')) {
-			newHabit = new Habit(
-				'Studies',
-				'Study daily for 30 days',
-				'None',
-				'Get 80% for my final exams'
-			);
-		}
 	};
 
-	const onKeyDown = (e: KeyboardEvent) => {
+	const onKeyDown = async (e: KeyboardEvent) => {
 		if (e.key === 'Enter' && !e.shiftKey && !isMobile()) {
-			onSubmit(e);
+			await onSubmit(e);
 		}
 	};
 </script>

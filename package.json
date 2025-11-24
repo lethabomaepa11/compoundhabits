@@ -16,7 +16,7 @@
 		"test": "npm run test:unit -- --run"
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.4.0",
+		"@eslint/compat": "latest",
 		"@eslint/js": "^9.38.0",
 		"@internationalized/date": "^3.10.0",
 		"@lucide/svelte": "^0.544.0",
@@ -53,6 +53,31 @@
 		"vitest-browser-svelte": "^1.1.0"
 	},
 	"dependencies": {
-		"mode-watcher": "^1.1.0"
+		"@huggingface/inference": "^4.13.3",
+		"@supabase/ssr": "^0.7.0",
+		"@supabase/supabase-js": "^2.83.0",
+		"@tiptap/core": "^3.11.0",
+		"@tiptap/extension-code-block-lowlight": "^3.11.0",
+		"@tiptap/extension-highlight": "^3.11.0",
+		"@tiptap/extension-image": "^3.11.0",
+		"@tiptap/extension-list": "^3.11.0",
+		"@tiptap/extension-mathematics": "^3.11.0",
+		"@tiptap/extension-subscript": "^3.11.0",
+		"@tiptap/extension-superscript": "^3.11.0",
+		"@tiptap/extension-table": "^3.11.0",
+		"@tiptap/extension-text-align": "^3.11.0",
+		"@tiptap/extension-text-style": "^3.11.0",
+		"@tiptap/extension-typography": "^3.11.0",
+		"@tiptap/extensions": "^3.11.0",
+		"@tiptap/markdown": "^3.11.0",
+		"@tiptap/pm": "^3.11.0",
+		"@tiptap/starter-kit": "^3.11.0",
+		"groq-sdk": "^0.36.0",
+		"katex": "^0.16.25",
+		"lowlight": "^3.3.0",
+		"mode-watcher": "^1.1.0",
+		"node-mailjet": "^6.0.11",
+		"svelte-tiptap": "^3.0.1",
+		"tiptap-extension-auto-joiner": "^0.1.3"
 	}
 }
